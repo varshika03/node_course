@@ -12,5 +12,12 @@
   "dependencies": {
     "express": "^4.16.3",
     "hbs": "^4.0.1"
-  }
+  },
+  "type": "dev",
+  "root": "/snap/heroku/1612/node_modules/heroku-cli/node_modules/@heroku-cli/plugin-status",
+  "name": "@oclif/plugin-help" ,
+"module": "@oclif/config@1.3.62",
+"task": "loadPlugins",
+"plugin": "@heroku-cli/plugin-status",
+"root": "/snap/heroku/1612/node_modules/heroku-cli/node_modules/@heroku-cli/plugin-status"
 }
