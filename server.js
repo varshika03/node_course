@@ -15,31 +15,31 @@ hbs.registerHelper('screamIt',((text)=>{
 }));
 app.set('view engine','hbs');
 app.use(express.static( __dirname + '/public'))
-app.get('/',(req,res)=>{
-	res.render('about.hbs',{
+// app.get('/',(req,res)=>{
+// 	res.render('about.hbs',{
 
-	});
-	//the user will get this string
+// 	});
+// 	//the user will get this string
 
-});
+// });
 
-app.use((req,res,next) =>{
-	var now = new Date().toString();
-	var log= `${now}: ${req.method} ${req.url}`;
-	console.log(log);
-	fs.appendFile('server.log',log+'\n',(err)=>{
-		if(err)
-		{
-			console.log('Unable to append to server.log');
-		}
-	});
+// app.use((req,res,next) =>{
+// 	var now = new Date().toString();
+// 	var log= `${now}: ${req.method} ${req.url}`;
+// 	console.log(log);
+// 	fs.appendFile('server.log',log+'\n',(err)=>{
+// 		if(err)
+// 		{
+// 			console.log('Unable to append to server.log');
+// 		}
+// 	});
 
 // app.use((req,res,next)=>{
 // 	res.render('maintainence.hbs');
 // });
 
-next();
-});
+// next();
+// });
 
 app.get('/about',(req,res)=>{
 	res.render('about.hbs',{
